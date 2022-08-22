@@ -1,80 +1,119 @@
-# Overview
+# HSU Pipeline
 
-This organization contains code and resources for working with Single-Unit data in the Jacobs lab.
+This organization contains templates, code, and resources for working with single-unit data collected from human subjects.
 
-## Tooling, Resources, & Tutorials
+## Table of Contents
 
-This organization contains the following resources & tutorials:
-- An [overview and examples](https://github.com/JacobsSU/NWBExamples) of NWB data files
-- A [tutorial](https://github.com/JacobsSU/SpikeTutorial) for working with spike data
+- [Overview](#overview)
+- [Sorting Data](#sorting-data)
+- [Converting Data](#converting-data)
+- [Analyzing Data](#analyzing-data)
+- [Using the Pipeline](#using-the-pipeline)
 
-Other relevant resources:
-- This is an external list of [spike resources](https://github.com/openlists/SpikeResources)
+## Overview
 
-Relevant tooling:
-- The [NWB](https://www.nwb.org/) file format is used to store data
-- The [spikeinterface](https://github.com/SpikeInterface/spikeinterface) tool will be used for managing spike sorting
-- The [spiketools](https://github.com/spiketools/spiketools) module is used for common analyses
+Human spiking data is typically collected with across multiple sites, 
+which may include different amplifiers, file types, etc. 
+It then requires specific procedures for spike-sorting and analyses, that 
+are oriented to the specifics of human data. 
+
+To address these needs, this pipeline implements and uses standardized tools and data
+formats, organized into a standard workflow that can be used for human spike data. 
+
+This pipeline is organized into multiple components, including:
+- SORT: basic pre-processing of the neural data, including spike sorting
+- CONVERT: converting the data to a standard data format, including neural and behavioural data
+- ANALYZE: analzying the data, including analyzing single-unit activity and relating it to behaviour
+
+Other resources that may be useful include:
+- This [tutorial](https://github.com/JacobsSU/SpikeTutorial) introduces working with spike data
+- This list of [spike resources](https://github.com/openlists/SpikeResources)
+
+## Sorting Data
+
+Neuro-physioloigcal recordings from human subjects that allow for single-unit analyses
+need to be spike sorted before putative single-neuron activity can be analyzed. 
+
+Notably, the specifics of the eletrodes in human patients which are typically recorded
+with microwires such as in Behnke-Fried electrodes, has some specific requirements that
+differ from what is typically done in other contexts, such as in work in animal models. 
+
+To address this, this pipeline implements a recommended approach for spike sorting 
+human single-unit data.
+
+### Spike Interface
+
+For running spike-sorting, we recommend the 
+[spikeinterface](https://github.com/SpikeInterface/spikeinterface) 
+tool for managing and running spike sorting. 
+
+SpikeInterface is a tool for creating flexible and robust 
+spike-sorting pipelines, including supporting access to a large
+number of existing spike sorters. 
+
+### SortTEMPLATE
+
+The [SortTEMPLATE](https://github.com/JacobsSU/SortTEMPLATE) 
+contains a template repository for spike sorting data. 
 
 ## Converting Data
 
-Data is initially collected from multiple sites with different amplifiers, file types, etc. 
-We therefore want to standardize the data format by converting all data into the NWB format. 
-To do so, we have developed a standard workflow, demonstrated in the template below. 
+To facilitate common tool usage and having shareable data,
+this pipeline uses a standard data standard and includes 
+tools for converting data to this standard. 
+
+### Neurodata Without Borders
+
+The data standard used in this pipeline is the
+[NWB](https://www.nwb.org/) file format. 
+NWB is a general-purpose data standard for neurophysiological data.
+
+See the 
+[NWBexamples](https://github.com/JacobsSU/NWBExamples) 
+repository for some examples NWB files.
 
 ### ConvertTEMPLATE
 
-The [ConvertTEMPLATE](https://github.com/JacobsSU/ConvertTEMPLATE) contains a template repository for conversting data for a particular task.
+The [ConvertTEMPLATE](https://github.com/JacobsSU/ConvertTEMPLATE) 
+contains a template repository for conversting data for a particular task
+into the NWB standard. 
 
-Each new task should have it's own conversion repository. 
-Note that convert repositories should only do data conversion, with minimal pre-processing, but no analysis.
+Note that convert repositories should only do data conversion, with minimal pre-processing, 
+but do not include data analyses.
 
 ### convnwb
 
-The [convnwb](https://github.com/JacobsSU/convnwb) mini-module contains general, task-agnostic, utilities that can be used to convert data to NWB format. 
+The [convnwb](https://github.com/JacobsSU/convnwb)
+mini-module contains general, task-agnostic, utilities that can be used to convert data to NWB format. 
 
-This module should be installed for doing data conversion. 
+This module should be installed for doing data conversion, and is used by the ConvertTEMPLATE.
 Any general conversion utilities, that can be used across tasks and datasets, should be added to and used from this module. 
 
-## Processing Data
+## Analyzing Data
 
-Notes on processing and analyzing data.
+The final step for a human single-unit project is to analyze the data. 
+This details of this process are necessarily more custom for each projects,
+however where possible analyses should follow are shared basica toolkit and organization. 
 
-### Spike Sorting
+### Spiketools
 
-The [spike sorting](https://github.com/JacobsSU/SpikeSorting) repository contains information and a template for running spike sorting.
+The [spiketools](https://github.com/spiketools/spiketools) 
+module is an open-source collected of analysis tools for working with single-unit activity, 
+specifically designed for analyzing human data.
 
-### Analyzing Data
+Spiketools implements genearal analysis code, which can be used for analyzing data across tasks and contexts. 
 
-Each analysis project should have it's own analysis repository, ideally following this (or a similar)
-[ProjectTemplate](https://github.com/structuredscience/ProjectTemplate).
+### AnalyzeTEMPLATE
 
-General analysis code is implemented in the [spiketools](https://github.com/spiketools/spiketools) module. 
-Any general analysis utilities, that can be used across tasks and datasets, should be added to and used from this module. 
+The [AnalyzeTEMPLATE](https://github.com/JacobsSU/AnalyzeTEMPLATE) 
+repository implements a template layout for an organized analysis repository. 
 
-## Adding a new task
+## Using the Pipeline
 
 To integrate a new task / project into the general workflow:
+- Create a new sorting repository, following the [SortTEMPLATE](https://github.com/JacobsSU/SortTEMPLATE)
+    - Follow instructions in the template to process the data through a spike sorter, and extract outputs
 - Create a new conversion repository, following the [ConvertTEMPLATE](https://github.com/JacobsSU/ConvertTEMPLATE)
-    - Follow instructions in the template for adding all the custom code & information for data conversion
-    - Once this repository is ready, data files can be exported to NWB format
-- Create a new analysis repository, following the [ProjectTemplate](https://github.com/structuredscience/ProjectTemplate)
+    - Follow instructions in the template for adding custom code & information, and running data conversion
+- Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/JacobsSU/AnalyzeTEMPLATE)
     - This repository should load NWB files, and add any custom code needed to analyze the data
-    - Analyses and figures for the project should be implented in this repository
-
-## Codemap
-
-A map of code on the [JacobsSU](https://github.com/JacobsSU) organization.
-
-### Conversion Repositories
-
-The following are repositories for converting specific tasks:
-
-- [ConvertTH](https://github.com/JacobsSU/ConvertTH), for the Treasure Hunt task
-- [ConvertT3](https://github.com/JacobsSU/ConvertT3), for the T3 task
-- [ConvertTrain](https://github.com/JacobsSU/ConvertTrain), for the Train task
-
-### Analysis Repositories
-
-- [AnalyzeTH](https://github.com/JacobsSU/AnalyzeTH), for the Treasure Hunt task
-- [AnalyzeT3](https://github.com/TomDonoghue/T3Analyses), for the T3 task
