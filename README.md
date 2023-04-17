@@ -1,6 +1,6 @@
 # HSU Pipeline
 
-This organization contains templates, code, and resources for working with single-unit data collected from human subjects.
+HSUPipeline is a pipeline for processing and analyzing single-unit neural data from human subjects.
 
 ## Table of Contents
 
@@ -12,7 +12,10 @@ This organization contains templates, code, and resources for working with singl
 
 ## Overview
 
-Human spiking data is typically collected with across multiple sites, 
+HSUPipeline including templates, code, and resources for 
+working with single-unit data collected from human subjects.
+
+Human single unit data is typically collected with across multiple sites, 
 which may include different amplifiers, file types, etc. 
 It then requires specific procedures for spike-sorting and analyses, that 
 are oriented to the specifics of human data. 
@@ -117,3 +120,13 @@ To integrate a new task / project into the general workflow:
     - Follow instructions in the template for adding custom code & information, and running data conversion
 - Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/JacobsSU/AnalyzeTEMPLATE)
     - This repository should load NWB files, and add any custom code needed to analyze the data
+
+## Contributing
+
+'HSUPipeline' welcomes contributions and suggestions from the community!
+
+If you would suggest an edit to a part of the project, please open an issue on Github, on the relevant repository, 
+and/or directly open a pull request with the suggested update.
+
+Note that to interact with the HSUPipeline organization you must follow the
+[Code of Conduct](https://github.com/HSUPipeline/Overview/blob/main/CODE_OF_CONDUCT.md).
