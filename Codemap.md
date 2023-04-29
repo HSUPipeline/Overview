@@ -2,7 +2,14 @@
 
 This file is a map of the repositories that are publicly available on the HSUPipeline Github organization.
 
-## Examples & Tutorials
+## Table of Contents
+
+- [Examples](#examples)
+- [Modules](#modules)
+- [Templates](#templates)
+- [Associated Tools](#associated-tools)
+
+## Examples
 
 The following examples & tutorials are available:
 - [NWBExamples](https://github.com/HSUPipeline/NWBExamples), providing examples of using and working with NWB files
@@ -20,10 +27,7 @@ The following templates are available:
 - [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
 - [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
 
-## Public Projects
+## Associated Tools
 
-The following are publicly available repositories for specific projects.
-
-Treasure Hunt:
-- [ConvertTH](https://github.com/HSUPipeline/ConvertTH)
-- [AnalyzeTH](https://github.com/HSUPipeline/AnalyzeTH)
+The following are tools associated with HSUPipeline:
+- [convnwb](https://github.com/spiketools/spiketools), a module for analyzing single-unit data
