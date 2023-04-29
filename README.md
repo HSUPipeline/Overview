@@ -5,10 +5,10 @@ HSUPipeline is a pipeline for processing and analyzing single-unit neural data f
 ## Table of Contents
 
 - [Overview](#overview)
-- [Sorting Data](#sorting-data)
-- [Converting Data](#converting-data)
-- [Analyzing Data](#analyzing-data)
-- [Using the Pipeline](#using-the-pipeline)
+- [Templates](#templates)
+- [Resources](#resources)
+- [Tools](#tools)
+- [Contributing](#contributing)
 
 ## Overview
 
@@ -23,26 +23,29 @@ are oriented to the specifics of human data.
 To address these needs, this pipeline implements and uses standardized tools and data
 formats, organized into a standard workflow that can be used for human spike data.
 
+## Templates
+
 This pipeline is organized into multiple components, including:
 - SORT: basic pre-processing of the neural data, including spike sorting
+    - This is available in the [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
 - CONVERT: converting the data to a standard data format, including neural and behavioural data
-- ANALYZE: analzying the data, including analyzing single-unit activity and relating it to behaviour
+    - This is available in the [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+- ANALYZE: analyzing the data, including analyzing single-unit activity and relating it to behaviour
+    - This is available in the [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+
+## Resources
 
 Other resources that may be useful include:
 - This [tutorial](https://github.com/HSUPipeline/SpikeTutorial) introduces working with spike data
-- This list of [spike resources](https://github.com/openlists/SpikeResources)
 
-## Sorting Data
+### Spike Resources
 
-Neuro-physioloigcal recordings from human subjects that allow for single-unit analyses
-need to be spike sorted before putative single-neuron activity can be analyzed.
+As part of the
+[OpenLists](https://openlists.github.io/) project,
+there is a maintained list of
+[spike resources](https://github.com/openlists/SpikeResources).
 
-Notably, the specifics of the eletrodes in human patients which are typically recorded
-with microwires such as in Behnke-Fried electrodes, has some specific requirements that
-differ from what is typically done in other contexts, such as in work in animal models.
-
-To address this, this pipeline implements a recommended approach for spike sorting
-human single-unit data.
+This list details tools and resources related to working with single-unit data.
 
 ### Spike Interface
 
@@ -54,17 +57,6 @@ SpikeInterface is a tool for creating flexible and robust
 spike-sorting pipelines, including supporting access to a large
 number of existing spike sorters.
 
-### SortTEMPLATE
-
-The [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
-contains a template repository for spike sorting data.
-
-## Converting Data
-
-To facilitate common tool usage and having shareable data,
-this pipeline uses a standard data standard and includes
-tools for converting data to this standard.
-
 ### Neurodata Without Borders
 
 The data standard used in this pipeline is the
@@ -75,14 +67,12 @@ See the
 [NWBexamples](https://github.com/HSUPipeline/NWBExamples)
 repository for some examples NWB files.
 
-### ConvertTEMPLATE
+## Tools
 
-The [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
-contains a template repository for conversting data for a particular task
-into the NWB standard.
+This pipeline also has associated software tools that are available to be used with the pipeline.
 
-Note that convert repositories should only do data conversion, with minimal pre-processing,
-but do not include data analyses.
+Note that these tools are organized as independent Python modules and thus can be used
+with or without using the broader pipeline.
 
 ### convnwb
 
@@ -92,34 +82,13 @@ mini-module contains general, task-agnostic, utilities that can be used to conve
 This module should be installed for doing data conversion, and is used by the ConvertTEMPLATE.
 Any general conversion utilities, that can be used across tasks and datasets, should be added to and used from this module.
 
-## Analyzing Data
-
-The final step for a human single-unit project is to analyze the data.
-This details of this process are necessarily more custom for each projects,
-however where possible analyses should follow are shared basica toolkit and organization.
-
 ### Spiketools
 
 The [spiketools](https://github.com/spiketools/spiketools)
-module is an open-source collected of analysis tools for working with single-unit activity,
+module is an open-source collection of analysis tools for working with single-unit activity,
 specifically designed for analyzing human data.
 
-Spiketools implements genearal analysis code, which can be used for analyzing data across tasks and contexts.
-
-### AnalyzeTEMPLATE
-
-The [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
-repository implements a template layout for an organized analysis repository.
-
-## Using the Pipeline
-
-To integrate a new task / project into the general workflow:
-- Create a new sorting repository, following the [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
-    - Follow instructions in the template to process the data through a spike sorter, and extract outputs
-- Create a new conversion repository, following the [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
-    - Follow instructions in the template for adding custom code & information, and running data conversion
-- Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
-    - This repository should load NWB files, and add any custom code needed to analyze the data
+Spiketools implements general analysis code, which can be used for analyzing data across tasks and contexts.
 
 ## Contributing
 
