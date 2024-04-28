@@ -1,18 +1,33 @@
 # Templates
 
-Overview of the templates available as part of the HSUPipeline.
-
-For a broader overview of the Human Single Unit Pipeline, see the
-[overview](https://hsupipeline.github.io/).
-
-For a detailed guide to using these templates to organize a project, see the pipeline
-[guide](https://hsupipeline.github.io/guide).
+This section provides an overview and guide to using the HSUPipeline, including introducing the templates.
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [SortTEMPLATE](#sort-template)
 - [ConvertTEMPLATE](#convert-template)
 - [AnalyzeTEMPLATE](#analyze-template)
+
+## Overview
+
+This guide overviews the entire pipeline, including pre-processing (spike sorting), converting
+data to a standardized format, and organizing analyses. Each of these steps has it's own template.
+
+To integrate a new task / project into the general workflow:
+- Create a new sorting repository, following the [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
+    - Follow instructions in the template to process the data through a spike sorter, and extract outputs
+- Create a new conversion repository, following the [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+    - Follow instructions in the template for adding custom code & information, and running data conversion
+- Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+    - This repository should load NWB files, and add any custom code needed to analyze the data
+
+Note that these steps are set up to be largely independent, so different parts of the above pipeline
+can generally be used in isolation. For more information on these templates, see the
+[templates](https://hsupipeline.github.io/templates) page.
+
+All of the templates in this pipeline follow the general outline of the
+[StructuredScience](https://github.com/structuredscience/) layout.
 
 ## Sort Template
 
