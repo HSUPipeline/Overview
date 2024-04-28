@@ -13,7 +13,7 @@ This file is a map of the repositories that are publicly available on the HSUPip
 
 The following examples & tutorials are available:
 - [NWBExamples](https://github.com/HSUPipeline/NWBExamples), providing examples of using and working with NWB files
-- [SpikeTutorials](https://github.com/HSUPipeline/SpikeTutorial), providing a tutorial of working with spike data
+- [SpikeTutorial](https://github.com/HSUPipeline/SpikeTutorial), providing a tutorial for working with spike data
 
 ## Modules
 
@@ -30,4 +30,4 @@ The following templates are available:
 ## Associated Tools
 
 The following are tools associated with HSUPipeline:
-- [convnwb](https://github.com/spiketools/spiketools), a module for analyzing single-unit data
+- [spiketools](https://github.com/spiketools/spiketools), a module for analyzing single-unit data
