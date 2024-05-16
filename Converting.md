@@ -8,23 +8,50 @@ standard data files.
 This template doesn't assume any particular file type or structure or structure within files,
 and should be applicable to a broad range of recording files.
 
-### Data Organization & Tools
+## Overview
+
+Once you have the neural and behavioral data collected, and pre-processing (e.g. spike
+sorting) applied, the next step in the pipeline is to organize the data into a standardized
+data format - specifically the [Neurodata Without Borders format](https://www.nwb.org/).
+
+Note that this template does not implement any data standards, etc, but
+rather provides a structured approach to use existing tools to organize data
+human single unit experiments (see the Resources section for what is used).
+
+## Data Streams
 
 For neural data, this template does not include IO functions for raw data files,
-and custom IO procedures may need to be updated / added. For this see
-[neo](https://github.com/NeuralEnsemble/python-neo).
+and custom IO procedures may need to be updated / added.
 
 For behavioral data, this template is generally geared towards parsing task
 related data from a logfile that is saved out into a txt file, which can be
 parsed line-by-line. For other formats of behavioral data, customization may be needed.
 
-Note that this template does not itself implement any utilities - the underlying
-general functionality is all implemented in the
-[convnwb](https://github.com/HSUPipeline/convnwb)
-module. This module is then aliased into the `conv` folder, on top
+## Resources
+
+This pipeline uses a series of existing external tools, standards, and
+resources to provide a template structure for converting data to a standardized data
+format. The key resources and tools are briefly described in this section.
+
+### NWB & pynwb
+
+[Neurodata Without Borders](https://www.nwb.org/) is a data standard for neuroscientific data,
+based on using [HDF5](https://www.hdfgroup.org/solutions/hdf5/) files.
+
+In order to interact read and write NWB files, we use the
+[pynwb](https://pynwb.readthedocs.io/en/stable/) Python library.
+
+### convnwb
+
+The underlying general functionality is all implemented in the
+[convnwb](https://github.com/HSUPipeline/convnwb) module.
+This module is then aliased into the `conv` folder, on top
 of which any needed customizations and additions can be made.
 
-### Convert: Template Guide
+## ConvertTEMPLATE
+
+The [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+provides a template structure for converting various data sources into NWB.
 
 Files to be processed will need to be organized into a consistent layout,
 which should follow the directory structure used by `convnwb`.
@@ -36,7 +63,7 @@ To do so, the template includes:
 - basic utilities for preprocessing and aligning data
 - script templates to apply conversion procedures to collected data files
 
-Note that this template / procedure does not include any processing of the data, such as spike sorting.
+Note that this template / procedure does not include pre-processing, such as spike sorting.
 Any such processing and analysis steps should be done separate to this data conversion.
 
 In order to apply this template to a new task, the following updates are needed:
@@ -59,6 +86,8 @@ After the above, this template should be able to be used for converting data fil
 
 Note that the `notebooks` implement templates that can be run interactively,
 however ultimately the goal is to implement procedures in the `scripts` folder.
+
+## Run Procedures
 
 After the above is set up, data files can be converted as follows:
 
