@@ -69,6 +69,7 @@ Instructions adapted from [here](https://docs.cse.lehigh.edu/xforwarding/xforwar
 6. Go to (in red) "Authentication parameters">"Browse..." >"Private key file for authentication"
 7. Locate your "id_rsa.ppk" private key and click "Open"
 8. Set `DISPLAY 127.0.0.1:0.0`
+![Putty](images/windows_putty_gui_setup.PNG)
 
 We recommend saving those session settings to putty so that you don't have to input them 
 everytime you want to use the combinato GUI.
