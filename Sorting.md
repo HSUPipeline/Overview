@@ -7,10 +7,10 @@ pre-processing neural recordings, including spike sorting.
 
 After neural data has been collected, the first key pre-processing step is spike sorting.
 
-Note that HSUPipeline does not implement or offer any spike sorters -
+Note that HSNPipeline does not implement or offer any spike sorters -
 all spike sorting should be done with an existing / external spike sorter.
 
-To support spike sorting, HSUPipeline offers a template structure for
+To support spike sorting, HSNPipeline offers a template structure for
 doing spike sorting with it's preferred spike sorter (combinato).
 Note that using this pipeline overall does not depend on using this particular
 spike sorter (or the sorting template). If collected data is already sorted
@@ -64,7 +64,7 @@ SpikeInterface is a Python based workflow tool for spike sorting:
 
 ## SortTEMPLATE
 
-The [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE) provides a
+The [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE) provides a
 template structure for managing spike sorting.
 
 Briefly, this template includes:
@@ -121,7 +121,7 @@ and extract
 
 This process can be done with the `extract_sorted.py` Python script that is included in the Sorting
 Template. For more information about what files this process loads, and how they are organized, see the
-[sorting IO](https://github.com/HSUPipeline/hsntools/blob/main/hsntools/sorting/io.py) functionality in hsntools.
+[sorting IO](https://github.com/HSNPipeline/hsntools/blob/main/hsntools/sorting/io.py) functionality in hsntools.
 
 Combinato uses the following language within it's files:
 - `class`: events collected together through the clustering process

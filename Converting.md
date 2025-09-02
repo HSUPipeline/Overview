@@ -44,13 +44,13 @@ In order to interact read and write NWB files, we use the
 ### hsntools
 
 The underlying general functionality is all implemented in the
-[hsntools](https://github.com/HSUPipeline/hsntools) module.
+[hsntools](https://github.com/HSNPipeline/hsntools) module.
 This module is then aliased into the `conv` folder, on top
 of which any needed customizations and additions can be made.
 
 ## ConvertTEMPLATE
 
-The [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+The [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
 provides a template structure for converting various data sources into NWB.
 
 Files to be processed will need to be organized into a consistent layout,

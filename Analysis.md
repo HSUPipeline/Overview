@@ -1,6 +1,6 @@
 # Analysis
 
-The third component of the HSUPipeline is a template structure for analyzing the data.
+The third component of the HSNPipeline is a template structure for analyzing the data.
 
 ## Overview
 
@@ -28,7 +28,7 @@ briefly described in this section.
 
 ## AnalyzeTEMPLATE
 
-The [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+The [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 provides a template structure for organizing the analysis of a project
 examining human single unit data.
 

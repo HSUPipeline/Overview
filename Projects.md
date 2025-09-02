@@ -1,6 +1,6 @@
 # Projects
 
-List of public projects avaialable on HSUPipeline.
+List of public projects avaialable on HSNPipeline.
 
 ## Table of Contents
 
@@ -11,8 +11,8 @@ List of public projects avaialable on HSUPipeline.
 The Treasure Hunt task has publicly available data & code.
 
 Repositories:
-- [ConvertTH](https://github.com/HSUPipeline/ConvertTH)
-- [AnalyzeTH](https://github.com/HSUPipeline/AnalyzeTH)
+- [ConvertTH](https://github.com/HSNPipeline/ConvertTH)
+- [AnalyzeTH](https://github.com/HSNPipeline/AnalyzeTH)
 
 The reference for this project is:
 

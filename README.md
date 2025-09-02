@@ -1,6 +1,6 @@
-# HSU Pipeline
+# HSN Pipeline
 
-HSUPipeline is a pipeline for processing and analyzing single-unit neural data from human subjects.
+HSNPipeline is a pipeline for processing and analyzing single-unit neural data from human subjects.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ HSUPipeline is a pipeline for processing and analyzing single-unit neural data f
 
 ## Overview
 
-HSUPipeline including templates, code, and resources for
+HSNPipeline including templates, code, and resources for
 working with single-unit data collected from human subjects.
 
 Human single unit data is typically collected with across multiple sites,
@@ -27,16 +27,16 @@ formats, organized into a standard workflow that can be used for human spike dat
 
 This pipeline is organized into multiple components, including:
 - SORT: basic pre-processing of the neural data, including spike sorting
-    - This is available in the [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
+    - This is available in the [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
 - CONVERT: converting the data to a standard data format, including neural and behavioural data
-    - This is available in the [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+    - This is available in the [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
 - ANALYZE: analyzing the data, including analyzing single-unit activity and relating it to behaviour
-    - This is available in the [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+    - This is available in the [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 
 ## Resources
 
 Other resources that may be useful include:
-- This [tutorial](https://github.com/HSUPipeline/SpikeTutorial) introduces working with spike data
+- This [tutorial](https://github.com/HSNPipeline/SpikeTutorial) introduces working with spike data
 
 ### Spike Resources
 
@@ -64,7 +64,7 @@ The data standard used in this pipeline is the
 NWB is a general-purpose data standard for neurophysiological data.
 
 See the
-[NWBexamples](https://github.com/HSUPipeline/NWBExamples)
+[NWBexamples](https://github.com/HSNPipeline/NWBExamples)
 repository for some examples NWB files.
 
 ## Tools
@@ -76,7 +76,7 @@ with or without using the broader pipeline.
 
 ### hsntools
 
-The [hsntools](https://github.com/HSUPipeline/hsntools)
+The [hsntools](https://github.com/HSNPipeline/hsntools)
 mini-module contains general, task-agnostic, utilities that can be used to convert data to NWB format.
 
 This module should be installed for doing data conversion, and is used by the ConvertTEMPLATE.
@@ -92,10 +92,10 @@ Spiketools implements general analysis code, which can be used for analyzing dat
 
 ## Contributing
 
-'HSUPipeline' welcomes contributions and suggestions from the community!
+'HSNPipeline' welcomes contributions and suggestions from the community!
 
 If you would suggest an edit to a part of the project, please open an issue on Github, on the relevant repository,
 and/or directly open a pull request with the suggested update.
 
-Note that to interact with the HSUPipeline organization you must follow the
-[Code of Conduct](https://github.com/HSUPipeline/Overview/blob/main/CODE_OF_CONDUCT.md).
+Note that to interact with the HSNPipeline organization you must follow the
+[Code of Conduct](https://github.com/HSNPipeline/Overview/blob/main/CODE_OF_CONDUCT.md).

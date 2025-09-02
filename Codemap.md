@@ -1,6 +1,6 @@
 # Codemap
 
-This file is a map of the repositories that are publicly available on the HSUPipeline Github organization.
+This file is a map of the repositories that are publicly available on the HSNPipeline Github organization.
 
 ## Table of Contents
 
@@ -12,22 +12,22 @@ This file is a map of the repositories that are publicly available on the HSUPip
 ## Examples
 
 The following examples & tutorials are available:
-- [NWBExamples](https://github.com/HSUPipeline/NWBExamples), providing examples of using and working with NWB files
-- [SpikeTutorial](https://github.com/HSUPipeline/SpikeTutorial), providing a tutorial for working with spike data
+- [NWBExamples](https://github.com/HSNPipeline/NWBExamples), providing examples of using and working with NWB files
+- [SpikeTutorial](https://github.com/HSNPipeline/SpikeTutorial), providing a tutorial for working with spike data
 
 ## Modules
 
 The following modules are available:
-- [hsntools](https://github.com/HSUPipeline/hsntools), a module for working with the HSUPipeline
+- [hsntools](https://github.com/HSNPipeline/hsntools), a module for working with the HSNPipeline
 
 ## Templates
 
 The following templates are available:
-- [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
-- [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
-- [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+- [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
+- [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
+- [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 
 ## Associated Tools
 
-The following are tools associated with HSUPipeline:
+The following are tools associated with HSNPipeline:
 - [spiketools](https://github.com/spiketools/spiketools), a module for analyzing single-unit data

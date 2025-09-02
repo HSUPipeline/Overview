@@ -1,6 +1,6 @@
 # Templates
 
-This section provides an overview and guide to using the HSUPipeline, including introducing the templates.
+This section provides an overview and guide to using the HSNPipeline, including introducing the templates.
 
 ## Table of Contents
 
@@ -15,11 +15,11 @@ This guide overviews the entire pipeline, including pre-processing (spike sortin
 data to a standardized format, and organizing analyses. Each of these steps has it's own template.
 
 To integrate a new task / project into the general workflow:
-- Create a new sorting repository, following the [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
+- Create a new sorting repository, following the [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
     - Follow instructions in the template to process the data through a spike sorter, and extract outputs
-- Create a new conversion repository, following the [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+- Create a new conversion repository, following the [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
     - Follow instructions in the template for adding custom code & information, and running data conversion
-- Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+- Create a new analysis repository, following the [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
     - This repository should load NWB files, and add any custom code needed to analyze the data
 
 Note that these steps are set up to be largely independent, so different parts of the above pipeline
@@ -42,7 +42,7 @@ recordings in animal models that often use dense grids of electrodes.
 To address this, this pipeline implements a recommended approach for spike sorting
 human single-unit data, designed to work with microwire recordings.
 
-The [SortTEMPLATE](https://github.com/HSUPipeline/SortTEMPLATE)
+The [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
 contains a template repository for spike sorting data.
 
 ## Convert Template
@@ -51,7 +51,7 @@ This pipeline uses a standard data standard and includes tools for converting da
 The goal of using a data standard is to organize data into consistent, shareable formats, as well as to
 facilitate using consistent analysis protocols.
 
-The [ConvertTEMPLATE](https://github.com/HSUPipeline/ConvertTEMPLATE)
+The [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
 contains a template repository for converting data for a particular task
 into the NWB standard.
 
@@ -64,5 +64,5 @@ The final step for a human single-unit project is to analyze the data.
 The details of this process are necessarily quite custom for any individual project,
 however where possible analyses should follow a shared basic toolkit and organization.
 
-The [AnalyzeTEMPLATE](https://github.com/HSUPipeline/AnalyzeTEMPLATE)
+The [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 repository implements a template layout for an organized analysis repository.
