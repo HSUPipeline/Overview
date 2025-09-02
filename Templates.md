@@ -24,7 +24,7 @@ To integrate a new task / project into the general workflow:
 
 Note that these steps are set up to be largely independent, so different parts of the above pipeline
 can generally be used in isolation. For more information on these templates, see the
-[templates](https://hsupipeline.github.io/templates) page.
+[templates](https://hsnpipeline.github.io/templates) page.
 
 All of the templates in this pipeline follow the general outline of the
 [StructuredScience](https://github.com/structuredscience/) layout.
