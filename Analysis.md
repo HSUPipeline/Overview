@@ -12,7 +12,7 @@ provides a structure layout for organizing these analyses.
 ## Resources
 
 As with other sections of this pipeline, the template itself does implement
-any key tooling, but rather provides an organized structure to a human single-unit
+any key tooling, but rather provides an organized structure to a human single-neuron
 analysis, while using external analysis tools. The key resources and tools are
 briefly described in this section.
 
@@ -30,7 +30,7 @@ briefly described in this section.
 
 The [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 provides a template structure for organizing the analysis of a project
-examining human single unit data.
+examining human single neuron data.
 
 The suggested structure of the template includes:
 - a sub-module for custom analysis code
@@ -40,7 +40,7 @@ The suggested structure of the template includes:
 Typically, analyses can be organized at different levels, for example:
 - group level analyses, that summarize / analyze data across the whole group
 - session level analyses, that run analyses across each session of data (e.g. behavioural results)
-- unit level analyses, that run a set of analyses on each unit (neuron)
+- unit level analyses, that run a set of analyses on each neuron
 
 In doing these analysis, the recommended approach is to organize analyses, each with
 their own visualizations, and then create `reports` that collect together all the
@@ -57,7 +57,7 @@ The suggested process for developing and applying analyses is as follows:
 
 For example, the following would re-run all analyses:
 ```
-# Run analyses across the group / sessions / all units
+# Run analyses across the group / sessions / all neurons
 python scripts/group_analysis.py
 python scripts/session_analysis.py
 python scripts/unit_analysis.py

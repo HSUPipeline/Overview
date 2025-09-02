@@ -31,16 +31,16 @@ All of the templates in this pipeline follow the general outline of the
 
 ## Sort Template
 
-Neuro-physiological recordings from human subjects that allow for single-unit analyses
+Neuro-physiological recordings from human subjects that allow for single-neuron analyses
 need to be spike sorted before putative single-neuron activity can be analyzed.
 
-In human patients, single-unit recordings are typically recorded with microwires,
+In human patients, single-neuron recordings are typically recorded with microwires,
 such as with Behnke-Fried electrodes. Notably, the specifics of these electrodes
 has some idiosyncracies that are different from other types of recordings, such as
 recordings in animal models that often use dense grids of electrodes.
 
 To address this, this pipeline implements a recommended approach for spike sorting
-human single-unit data, designed to work with microwire recordings.
+human single-neuron data, designed to work with microwire recordings.
 
 The [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
 contains a template repository for spike sorting data.
@@ -60,7 +60,7 @@ but do not include data analyses.
 
 ## Analyze Template
 
-The final step for a human single-unit project is to analyze the data.
+The final step for a human single-neuron project is to analyze the data.
 The details of this process are necessarily quite custom for any individual project,
 however where possible analyses should follow a shared basic toolkit and organization.
 

@@ -1,6 +1,6 @@
 # HSN Pipeline
 
-HSNPipeline is a pipeline for processing and analyzing single-unit neural data from human subjects.
+HSNPipeline is a pipeline for processing and analyzing single-neuron data from human subjects.
 
 ## Table of Contents
 
@@ -12,16 +12,16 @@ HSNPipeline is a pipeline for processing and analyzing single-unit neural data f
 
 ## Overview
 
-HSNPipeline including templates, code, and resources for
-working with single-unit data collected from human subjects.
+HSNPipeline includes templates, code, and resources for
+working with single-neuron data collected from human subjects.
 
-Human single unit data is typically collected with across multiple sites,
+Human single-neuron data is typically collected across multiple sites,
 which may include different amplifiers, file types, etc.
 It then requires specific procedures for spike-sorting and analyses, that
 are oriented to the specifics of human data.
 
 To address these needs, this pipeline implements and uses standardized tools and data
-formats, organized into a standard workflow that can be used for human spike data.
+formats, organized into a standard workflow that can be used for human single-neuron data.
 
 ## Templates
 
@@ -30,7 +30,7 @@ This pipeline is organized into multiple components, including:
     - This is available in the [SortTEMPLATE](https://github.com/HSNPipeline/SortTEMPLATE)
 - CONVERT: converting the data to a standard data format, including neural and behavioural data
     - This is available in the [ConvertTEMPLATE](https://github.com/HSNPipeline/ConvertTEMPLATE)
-- ANALYZE: analyzing the data, including analyzing single-unit activity and relating it to behaviour
+- ANALYZE: analyzing the data, including analyzing single-neuron activity and relating it to behaviour
     - This is available in the [AnalyzeTEMPLATE](https://github.com/HSNPipeline/AnalyzeTEMPLATE)
 
 ## Resources
@@ -45,7 +45,7 @@ As part of the
 there is a maintained list of
 [spike resources](https://github.com/openlists/SpikeResources).
 
-This list details tools and resources related to working with single-unit data.
+This list details tools and resources related to working with single-neuron data.
 
 ### Spike Interface
 
@@ -85,7 +85,7 @@ Any general conversion utilities, that can be used across tasks and datasets, sh
 ### Spiketools
 
 The [spiketools](https://github.com/spiketools/spiketools)
-module is an open-source collection of analysis tools for working with single-unit activity,
+module is an open-source collection of analysis tools for working with single-neuron activity,
 specifically designed for analyzing human data.
 
 Spiketools implements general analysis code, which can be used for analyzing data across tasks and contexts.

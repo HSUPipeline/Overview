@@ -30,4 +30,4 @@ The following templates are available:
 ## Associated Tools
 
 The following are tools associated with HSNPipeline:
-- [spiketools](https://github.com/spiketools/spiketools), a module for analyzing single-unit data
+- [spiketools](https://github.com/spiketools/spiketools), a module for analyzing single-neuron data
