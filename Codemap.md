@@ -18,7 +18,7 @@ The following examples & tutorials are available:
 ## Modules
 
 The following modules are available:
-- [convnwb](https://github.com/HSUPipeline/convnwb), a helper module for converting data to NWB
+- [hsntools](https://github.com/HSUPipeline/hsntools), a module for working with the HSUPipeline
 
 ## Templates
 

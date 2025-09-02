@@ -74,9 +74,9 @@ This pipeline also has associated software tools that are available to be used w
 Note that these tools are organized as independent Python modules and thus can be used
 with or without using the broader pipeline.
 
-### convnwb
+### hsntools
 
-The [convnwb](https://github.com/HSUPipeline/convnwb)
+The [hsntools](https://github.com/HSUPipeline/hsntools)
 mini-module contains general, task-agnostic, utilities that can be used to convert data to NWB format.
 
 This module should be installed for doing data conversion, and is used by the ConvertTEMPLATE.

@@ -121,7 +121,7 @@ and extract
 
 This process can be done with the `extract_sorted.py` Python script that is included in the Sorting
 Template. For more information about what files this process loads, and how they are organized, see the
-[sorting IO](https://github.com/HSUPipeline/convnwb/blob/main/convnwb/sorting/io.py) functionality in convnwb.
+[sorting IO](https://github.com/HSUPipeline/hsntools/blob/main/hsntools/sorting/io.py) functionality in hsntools.
 
 Combinato uses the following language within it's files:
 - `class`: events collected together through the clustering process
