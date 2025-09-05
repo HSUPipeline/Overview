@@ -1,6 +1,6 @@
 # Projects
 
-List of public projects avaialable on HSNPipeline.
+List of public projects available on HSNPipeline.
 
 ## Table of Contents
 
